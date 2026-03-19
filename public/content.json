@@ -1,0 +1,121 @@
+{
+  "hero": {
+    "name": "Joel John",
+    "title": "Mobile Developer",
+    "description": "Building fintech solutions & payment systems with Flutter & iOS across 5 countries. Specializing in scalable architecture, system design, and mobile excellence.",
+    "status": "Open to opportunities",
+    "stats": [
+      { "label": "5+", "value": "Years" },
+      { "label": "12+", "value": "Apps" },
+      { "label": "5", "value": "Countries" },
+      { "label": "2", "value": "Platforms" }
+    ],
+    "cta": {
+      "primary": "View my work",
+      "secondary": "Download CV"
+    },
+    "videoUrl": "https://example.com/softpos-demo.mp4"
+  },
+  "projects": [
+    {
+      "id": "1",
+      "name": "SoftPOS",
+      "platform": "iOS • Android",
+      "description": "Mobile payment solution enabling tap-to-pay transactions. Built with Flutter, NFC integration, and Firebase backend for secure payment processing across 5 countries.",
+      "featured": true,
+      "tags": ["Flutter", "NFC", "Payments", "Firebase"],
+      "link": "https://github.com/Joel134"
+    },
+    {
+      "id": "2",
+      "name": "LendHOPE",
+      "platform": "iOS",
+      "description": "Digital lending platform with KYC integration, credit scoring, and loan management. Built with clean architecture and real-time syncing.",
+      "featured": false,
+      "tags": ["iOS", "Swift", "Architecture"],
+      "link": "https://github.com/Joel134"
+    },
+    {
+      "id": "3",
+      "name": "Pocket Mentor",
+      "platform": "Android",
+      "description": "Educational app connecting mentors and mentees with real-time messaging and profile management.",
+      "featured": false,
+      "tags": ["Android", "Kotlin", "Real-time"],
+      "link": "https://github.com/Joel134"
+    }
+  ],
+  "skills": [
+    {
+      "category": "Mobile",
+      "skills": [
+        { "name": "Flutter", "percentage": 95 },
+        { "name": "iOS (Swift)", "percentage": 78 },
+        { "name": "Android (Kotlin)", "percentage": 75 },
+        { "name": "NFC & Payments", "percentage": 85 }
+      ]
+    },
+    {
+      "category": "Backend & Tools",
+      "skills": [
+        { "name": "Firebase", "percentage": 85 },
+        { "name": "REST APIs", "percentage": 88 },
+        { "name": "System Design", "percentage": 65 },
+        { "name": "AI Agents", "percentage": 60 }
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "id": "1",
+      "years": "2022 — Now",
+      "role": "Senior Mobile Engineer",
+      "company": "Surfboard Payments",
+      "description": "Leading mobile development for fintech payment solutions. Architected Flutter apps handling millions of transactions. Mentored 3+ engineers on system design and clean architecture.",
+      "skills": ["Flutter", "Fintech", "Architecture", "Leadership"]
+    },
+    {
+      "id": "2",
+      "years": "2020 — 2022",
+      "role": "Mobile Developer",
+      "company": "Previous Company",
+      "description": "Built iOS and Android apps from scratch. Implemented real-time syncing, offline-first architecture, and cross-platform features.",
+      "skills": ["iOS", "Android", "Cross-platform", "REST APIs"]
+    },
+    {
+      "id": "3",
+      "years": "2019 — 2020",
+      "role": "Junior Developer",
+      "company": "Early Career",
+      "description": "Started with iOS development, quickly picked up Flutter and became the go-to person for mobile solutions.",
+      "skills": ["Swift", "Flutter", "Learning", "Problem-solving"]
+    }
+  ],
+  "contact": [
+    {
+      "id": "1",
+      "type": "github",
+      "title": "GitHub",
+      "value": "@Joel134",
+      "link": "https://github.com/Joel134"
+    },
+    {
+      "id": "2",
+      "type": "linkedin",
+      "title": "LinkedIn",
+      "value": "/in/joel-john",
+      "link": "https://linkedin.com/in/joel-john"
+    },
+    {
+      "id": "3",
+      "type": "email",
+      "title": "Email",
+      "value": "joel@example.com",
+      "link": "mailto:joel@example.com"
+    }
+  ],
+  "footer": {
+    "location": "Joel John — Chennai, India",
+    "credit": "Built with Next.js"
+  }
+}
