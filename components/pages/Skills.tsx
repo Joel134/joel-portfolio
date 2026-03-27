@@ -24,16 +24,16 @@ export default function Skills() {
   if (!skillGroups.length) return null
 
   return (
-    <section id="skills" className="min-h-screen flex items-center justify-center px-6 py-20">
+    <section id="skills" className="py-24 px-6 border-t border-white/5">
       <div className="max-w-4xl w-full">
-        <h2 className="text-3xl font-semibold mb-12 text-white/90">Skills</h2>
+        <h2 className="text-3xl font-semibold mb-8 text-white/90">Skills</h2>
 
-        {/* Simple list - no progress bars */}
-        <div className="flex flex-wrap gap-3">
+        {/* Simple clean skill tags */}
+        <div className="flex flex-wrap gap-2">
           {skillGroups.flatMap(group => group.skills).map((skill) => (
             <span
               key={skill.name}
-              className="px-4 py-2 rounded-md bg-white/5 text-white/70 text-sm border border-white/10"
+              className="px-3 py-1.5 rounded-md bg-white/5 text-white/60 text-sm border border-white/10 hover:border-white/20 transition-all"
             >
               {skill.name}
             </span>

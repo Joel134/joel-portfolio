@@ -23,9 +23,11 @@ export default function Contact() {
   if (!contacts.length) return null
 
   return (
-    <section id="contact" className="min-h-screen flex items-center justify-center px-6 py-20">
+    <section id="contact" className="py-24 px-6 border-t border-white/5">
       <div className="max-w-2xl w-full">
         <h2 className="text-3xl font-semibold mb-8 text-white/90">Contact</h2>
+
+        <p className="text-white/50 mb-8">Let's connect. Find me on:</p>
 
         <div className="space-y-3">
           {contacts.map((contact) => (

@@ -23,14 +23,16 @@ export default function Experience() {
   if (!experiences.length) return null
 
   return (
-    <section id="experience" className="min-h-screen flex items-center justify-center px-6 py-20">
+    <section id="experience" className="py-24 px-6 border-t border-white/5">
       <div className="max-w-3xl w-full">
         <h2 className="text-3xl font-semibold mb-12 text-white/90">Experience</h2>
 
-        {/* Simple list - minimal */}
-        <div className="space-y-8">
+        {/* Clean experience list */}
+        <div className="space-y-10">
           {experiences.map((exp) => (
-            <div key={exp.id} className="border-l-2 border-white/10 pl-6">
+            <div key={exp.id} className="relative pl-8 border-l border-white/10">
+              <div className="absolute -left-1.5 top-0 w-3 h-3 rounded-full bg-white/20"></div>
+              
               <div className="text-sm text-white/40 mb-1">{exp.years}</div>
               <h3 className="text-lg font-medium text-white">{exp.role}</h3>
               <p className="text-white/60 mb-3">{exp.company}</p>
