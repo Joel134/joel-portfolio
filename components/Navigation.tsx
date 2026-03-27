@@ -32,9 +32,9 @@ export default function Navigation({ currentPage, onPageChange }: NavigationProp
     <nav className="fixed top-0 left-0 right-0 z-40 flex justify-center pt-6">
       <div
         className={`
-          flex items-center gap-1 px-6 py-3 rounded-full border border-purple-primary
-          transition-all duration-300
-          ${isScrolled ? 'bg-black/50 backdrop-blur-md' : 'bg-black/40'}
+          flex items-center gap-0.5 px-2 py-1 rounded-full border border-white/10
+          transition-all duration-200
+          ${isScrolled ? 'bg-black/60 backdrop-blur-md' : 'bg-black/40'}
         `}
       >
         {navItems.map((item) => (
@@ -42,11 +42,11 @@ export default function Navigation({ currentPage, onPageChange }: NavigationProp
             key={item.page}
             onClick={() => onPageChange(item.page)}
             className={`
-              px-4 py-2 rounded-full font-medium text-sm transition-all duration-300
+              px-4 py-1.5 rounded-full font-medium text-sm transition-all duration-200
               ${
                 currentPage === item.page
-                  ? 'bg-purple-primary/30 text-purple-accent'
-                  : 'text-white/70 hover:text-white'
+                  ? 'bg-white/10 text-white'
+                  : 'text-white/50 hover:text-white/80'
               }
             `}
           >

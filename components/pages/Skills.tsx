@@ -26,43 +26,20 @@ export default function Skills() {
   return (
     <section className="min-h-screen flex items-center justify-center px-6 py-20">
       <div className="max-w-4xl w-full">
-        <h2 className="text-5xl font-bold mb-16">Skills & Expertise</h2>
+        <h2 className="text-3xl font-semibold mb-12 text-white/90">Skills</h2>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-          {skillGroups.map((group) => (
-            <div key={group.category} className="space-y-10">
-              <h3 className="text-2xl font-bold bg-gradient-purple-teal bg-clip-text text-transparent">
-                {group.category}
-              </h3>
-
-              <div className="space-y-8">
-                {group.skills.map((skill) => (
-                  <SkillRow key={skill.name} skill={skill} />
-                ))}
-              </div>
-            </div>
+        {/* Simple list - no progress bars */}
+        <div className="flex flex-wrap gap-3">
+          {skillGroups.flatMap(group => group.skills).map((skill) => (
+            <span
+              key={skill.name}
+              className="px-4 py-2 rounded-md bg-white/5 text-white/70 text-sm border border-white/10"
+            >
+              {skill.name}
+            </span>
           ))}
         </div>
       </div>
     </section>
-  )
-}
-
-function SkillRow({ skill }: { skill: Skill }) {
-  return (
-    <div className="space-y-3">
-      <div className="flex items-center justify-between">
-        <span className="text-white font-semibold">{skill.name}</span>
-        <span className="text-white/60 text-sm font-medium">{skill.percentage}%</span>
-      </div>
-
-      {/* Progress bar with gradient */}
-      <div className="h-1.5 rounded-full bg-white/10 overflow-hidden">
-        <div
-          className="h-full bg-gradient-purple-teal rounded-full transition-all duration-700 ease-out"
-          style={{ width: `${skill.percentage}%` }}
-        ></div>
-      </div>
-    </div>
   )
 }

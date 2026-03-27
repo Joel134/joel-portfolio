@@ -25,61 +25,30 @@ export default function Experience() {
   return (
     <section className="min-h-screen flex items-center justify-center px-6 py-20">
       <div className="max-w-3xl w-full">
-        <h2 className="text-5xl font-bold mb-16">Experience</h2>
+        <h2 className="text-3xl font-semibold mb-12 text-white/90">Experience</h2>
 
-        <div className="relative pl-12">
-          {/* Animated timeline line with meteor effect */}
-          <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-gradient-to-b from-purple-primary via-teal-primary to-transparent animate-meteor-line"></div>
-
-          {/* Timeline items */}
-          <div className="space-y-12">
-            {experiences.map((exp, idx) => (
-              <TimelineItem key={exp.id} experience={exp} index={idx} />
-            ))}
-          </div>
-        </div>
-      </div>
-    </section>
-  )
-}
-
-interface TimelineItemProps {
-  experience: ExperienceItem
-  index: number
-}
-
-function TimelineItem({ experience, index }: TimelineItemProps) {
-  return (
-    <div className="relative">
-      {/* Timeline dot - perfectly aligned */}
-      <div className="absolute -left-9 top-0 w-5 h-5 rounded-full bg-purple-primary border-4 border-[#080810] shadow-lg shadow-purple-primary/50 z-10"></div>
-
-      {/* Content card */}
-      <div className="bg-gradient-to-br from-white/8 to-white/5 border border-white/10 rounded-lg p-6 hover:border-purple-primary/40 hover:bg-white/10 transition-all duration-300 ml-2">
-        {/* Year range */}
-        <div className="text-sm font-semibold text-teal-primary mb-2">{experience.years}</div>
-
-        {/* Role */}
-        <h3 className="text-2xl font-bold text-white mb-1">{experience.role}</h3>
-
-        {/* Company */}
-        <p className="text-purple-accent font-semibold mb-4">{experience.company}</p>
-
-        {/* Description */}
-        <p className="text-white/70 mb-4 leading-relaxed">{experience.description}</p>
-
-        {/* Skills tags */}
-        <div className="flex flex-wrap gap-2">
-          {experience.skills.map((skill) => (
-            <span
-              key={skill}
-              className="px-3 py-1 rounded-full text-xs font-medium bg-teal-primary/20 text-teal-primary border border-teal-primary/40 hover:border-teal-primary/60 transition-colors"
-            >
-              {skill}
-            </span>
+        {/* Simple list - minimal */}
+        <div className="space-y-8">
+          {experiences.map((exp) => (
+            <div key={exp.id} className="border-l-2 border-white/10 pl-6">
+              <div className="text-sm text-white/40 mb-1">{exp.years}</div>
+              <h3 className="text-lg font-medium text-white">{exp.role}</h3>
+              <p className="text-white/60 mb-3">{exp.company}</p>
+              <p className="text-sm text-white/40 mb-3">{exp.description}</p>
+              <div className="flex flex-wrap gap-2">
+                {exp.skills.map((skill) => (
+                  <span
+                    key={skill}
+                    className="px-2 py-1 rounded text-xs text-white/50 bg-white/5"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
           ))}
         </div>
       </div>
-    </div>
+    </section>
   )
 }

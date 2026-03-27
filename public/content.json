@@ -19,30 +19,30 @@
   "projects": [
     {
       "id": "1",
-      "name": "SoftPOS",
-      "platform": "iOS • Android",
-      "description": "Mobile payment solution enabling tap-to-pay transactions. Built with Flutter, NFC integration, and Firebase backend for secure payment processing across 5 countries.",
+      "name": "CheckoutX (SoftPOS)",
+      "platform": "Android",
+      "description": "Tap-to-pay Android app for Surfboard Payments. Turn any Android device into a payment terminal with NFC contactless payments.",
       "featured": true,
-      "tags": ["Flutter", "NFC", "Payments", "Firebase"],
-      "link": "https://github.com/Joel134"
+      "tags": ["Flutter", "NFC", "Payments", "Android"],
+      "link": "https://play.google.com/store/apps"
     },
     {
       "id": "2",
       "name": "LendHOPE",
       "platform": "iOS",
-      "description": "Digital lending platform with KYC integration, credit scoring, and loan management. Built with clean architecture and real-time syncing.",
+      "description": "Digital lending platform for HOPE worldwide. Features KYC integration, credit scoring, and loan management for microfinance.",
       "featured": false,
-      "tags": ["iOS", "Swift", "Architecture"],
-      "link": "https://github.com/Joel134"
+      "tags": ["Flutter", "iOS", "Fintech", "KYC"],
+      "link": "https://apps.apple.com"
     },
     {
       "id": "3",
-      "name": "Pocket Mentor",
+      "name": "Entrepreneur Roadmap",
       "platform": "Android",
-      "description": "Educational app connecting mentors and mentees with real-time messaging and profile management.",
+      "description": "Educational app connecting entrepreneurs with mentors. Features roadmap planning, real-time messaging, and profile management.",
       "featured": false,
-      "tags": ["Android", "Kotlin", "Real-time"],
-      "link": "https://github.com/Joel134"
+      "tags": ["Kotlin", "Android", "Education", "Mentorship"],
+      "link": "https://play.google.com/store.apps"
     }
   ],
   "skills": [
@@ -61,7 +61,7 @@
         { "name": "Firebase", "percentage": 85 },
         { "name": "REST APIs", "percentage": 88 },
         { "name": "System Design", "percentage": 65 },
-        { "name": "AI Agents", "percentage": 60 }
+        { "name": "Clean Architecture", "percentage": 70 }
       ]
     }
   ],

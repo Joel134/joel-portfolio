@@ -29,42 +29,42 @@ export default function Home() {
       <div className="max-w-6xl w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left content */}
-          <div className="space-y-8">
-            {/* Status pill */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-teal-primary/20 border border-teal-primary/40 animate-pulse-gentle">
-              <div className="w-2 h-2 rounded-full bg-teal-primary"></div>
-              <span className="text-sm text-teal-primary">{content.status}</span>
+          <div className="space-y-6">
+            {/* Status pill - minimal */}
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10">
+              <div className="w-1.5 h-1.5 rounded-full bg-white"></div>
+              <span className="text-sm text-white/60">{content.status}</span>
             </div>
 
-            {/* Name */}
+            {/* Name - clean white */}
             <div>
-              <h2 className="text-6xl lg:text-7xl font-bold text-white mb-2">{content.name}</h2>
+              <h2 className="text-5xl lg:text-6xl font-bold text-white mb-2 tracking-tight">{content.name}</h2>
             </div>
 
-            {/* Gradient title */}
+            {/* Title - simple white, no gradient */}
             <div>
-              <h1 className="text-5xl lg:text-6xl font-bold bg-gradient-purple-teal bg-clip-text text-transparent">
+              <h1 className="text-4xl lg:text-5xl font-semibold text-white/80">
                 {content.title}
               </h1>
             </div>
 
             {/* Description */}
-            <p className="text-lg text-white/70 leading-relaxed max-w-lg">{content.description}</p>
+            <p className="text-base text-white/50 leading-relaxed max-w-md">{content.description}</p>
 
             {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-4">
+            <div className="grid grid-cols-4 gap-3 pt-2">
               {content.stats.map((stat) => (
                 <StatCard key={stat.label} label={stat.label} value={stat.value} />
               ))}
             </div>
 
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <button className="px-6 py-3 rounded-lg bg-purple-primary hover:bg-purple-accent text-white font-semibold transition-colors inline-flex items-center gap-2 w-full sm:w-auto justify-center">
-                {content.cta.primary} <ArrowRight size={18} />
+            {/* CTA Buttons - minimal */}
+            <div className="flex flex-col sm:flex-row gap-3 pt-2">
+              <button className="px-5 py-2.5 rounded-md bg-white text-black font-medium text-sm hover:bg-white/90 transition-colors inline-flex items-center gap-2 w-full sm:w-auto justify-center">
+                {content.cta.primary} <ArrowRight size={16} />
               </button>
-              <button className="px-6 py-3 rounded-lg border border-purple-primary/40 hover:border-purple-primary text-white font-semibold transition-colors inline-flex items-center gap-2 w-full sm:w-auto justify-center">
-                {content.cta.secondary} <Download size={18} />
+              <button className="px-5 py-2.5 rounded-md border border-white/20 text-white/80 font-medium text-sm hover:border-white/40 transition-colors inline-flex items-center gap-2 w-full sm:w-auto justify-center">
+                {content.cta.secondary} <Download size={16} />
               </button>
             </div>
           </div>
@@ -81,9 +81,9 @@ export default function Home() {
 
 function StatCard({ label, value }: { label: string; value: string }) {
   return (
-    <div className="p-4 rounded-lg bg-white/5 border border-white/10 hover:border-purple-primary/40 transition-colors">
-      <div className="font-bold text-2xl bg-gradient-purple-teal bg-clip-text text-transparent">{label}</div>
-      <div className="text-sm text-white/60">{value}</div>
+    <div className="p-3 rounded-md bg-white/5 border border-white/5 hover:border-white/10 transition-colors">
+      <div className="font-semibold text-lg text-white">{label}</div>
+      <div className="text-xs text-white/40">{value}</div>
     </div>
   )
 }
