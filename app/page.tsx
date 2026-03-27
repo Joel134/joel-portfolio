@@ -1,48 +1,35 @@
 'use client'
 
-import { useState, useEffect } from 'react'
-import Navigation from '@/components/Navigation'
 import Home from '@/components/pages/Home'
 import Work from '@/components/pages/Work'
 import Skills from '@/components/pages/Skills'
 import Experience from '@/components/pages/Experience'
 import Contact from '@/components/pages/Contact'
 import Footer from '@/components/Footer'
-import ThemeToggle from '@/components/ThemeToggle'
-
-type Page = 'home' | 'work' | 'skills' | 'experience' | 'contact'
 
 export default function Portfolio() {
-  const [currentPage, setCurrentPage] = useState<Page>('home')
-  const [isLoading, setIsLoading] = useState(false)
-
-  const handlePageChange = (page: Page) => {
-    setIsLoading(true)
-    setTimeout(() => {
-      setCurrentPage(page)
-      setIsLoading(false)
-    }, 200)
-  }
-
   return (
-    <div className="min-h-screen bg-[#080810] text-white overflow-x-hidden">
-      {/* Theme toggle in top right */}
-      <div className="fixed top-6 right-6 z-50">
-        <ThemeToggle />
-      </div>
-
-      {/* Navigation */}
-      <Navigation currentPage={currentPage} onPageChange={handlePageChange} />
-
-      {/* Main content */}
-      <main className="pt-32">
-        <div className={`transition-opacity duration-300 ${isLoading ? 'opacity-0' : 'opacity-100'}`}>
-          {currentPage === 'home' && <Home />}
-          {currentPage === 'work' && <Work />}
-          {currentPage === 'skills' && <Skills />}
-          {currentPage === 'experience' && <Experience />}
-          {currentPage === 'contact' && <Contact />}
+    <div className="min-h-screen bg-[#0a0a0a] text-white">
+      {/* Sticky header */}
+      <header className="fixed top-0 left-0 right-0 z-50 bg-[#0a0a0a]/80 backdrop-blur-sm border-b border-white/5">
+        <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+          <a href="#" className="text-lg font-semibold text-white">Joel</a>
+          <nav className="flex gap-6">
+            <a href="#work" className="text-sm text-white/50 hover:text-white transition-colors">Work</a>
+            <a href="#skills" className="text-sm text-white/50 hover:text-white transition-colors">Skills</a>
+            <a href="#experience" className="text-sm text-white/50 hover:text-white transition-colors">Experience</a>
+            <a href="#contact" className="text-sm text-white/50 hover:text-white transition-colors">Contact</a>
+          </nav>
         </div>
+      </header>
+
+      {/* Main content - scrollable single page */}
+      <main className="pt-20">
+        <Home />
+        <Work />
+        <Skills />
+        <Experience />
+        <Contact />
       </main>
 
       {/* Footer */}

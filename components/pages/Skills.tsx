@@ -24,7 +24,7 @@ export default function Skills() {
   if (!skillGroups.length) return null
 
   return (
-    <section className="min-h-screen flex items-center justify-center px-6 py-20">
+    <section id="skills" className="min-h-screen flex items-center justify-center px-6 py-20">
       <div className="max-w-4xl w-full">
         <h2 className="text-3xl font-semibold mb-12 text-white/90">Skills</h2>
 

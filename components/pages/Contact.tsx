@@ -23,7 +23,7 @@ export default function Contact() {
   if (!contacts.length) return null
 
   return (
-    <section className="min-h-screen flex items-center justify-center px-6 py-20">
+    <section id="contact" className="min-h-screen flex items-center justify-center px-6 py-20">
       <div className="max-w-2xl w-full">
         <h2 className="text-3xl font-semibold mb-8 text-white/90">Contact</h2>
 

@@ -28,7 +28,7 @@ export default function Work() {
   const otherProjects = projects.filter((p) => !p.featured)
 
   return (
-    <section className="min-h-screen flex items-center justify-center px-6 py-20">
+    <section id="work" className="min-h-screen flex items-center justify-center px-6 py-20">
       <div className="max-w-5xl w-full">
         <h2 className="text-3xl font-semibold mb-12 text-white/90">Work</h2>
 
